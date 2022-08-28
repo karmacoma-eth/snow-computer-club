@@ -3,23 +3,23 @@ pragma solidity ^0.8.13;
 
 import "forge-std/Test.sol";
 
-import "src/UpdatableCollab.sol";
+import "src/SnowComputerClub.sol";
 import "src/TicTacToe.sol";
 
 contract SnowProgramTest is Test {
     uint256 public gasPerRun = 50_000;
 
-    UpdatableCollab public collab;
+    SnowComputerClub public club;
     TicTacToe public tictactoe;
 
     function setUp() public {
-       collab = new UpdatableCollab();
+       club = new SnowComputerClub();
        tictactoe = new TicTacToe();
     }
 
-    function testUpdatableCanBeStored() public {
+    function testClubCanBeStored() public {
         uint256[64] memory buffer;
-        (uint8 index, uint256 value) = collab.run{gas: gasPerRun}(buffer, 0);
+        (uint8 index, uint256 value) = club.run{gas: gasPerRun}(buffer, 0);
         require(index < 64, "Should return index");
         require(buffer[index] != value, "Should update value");
     }

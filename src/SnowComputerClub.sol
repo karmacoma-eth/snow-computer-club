@@ -9,7 +9,7 @@ interface SnowV1 {
     function programs(uint256 tokenId) external view returns (ISnowV1Program);
 }
 
-contract UpdatableCollab is ISnowV1Program {
+contract SnowComputerClub is ISnowV1Program {
     address public constant SNOW_COMPUTER = 0xF53D926c13Af77C53AFAe6B33480DDd94B167610;
 
     /// @dev delegates all draw operations to this program
@@ -26,7 +26,7 @@ contract UpdatableCollab is ISnowV1Program {
     }
 
     function name() external view returns (string memory) {
-        return "UpdatableCollab";
+        return "SnowComputerClub";
     }
 
     function run(uint256[64] calldata canvas, uint8 lastUpdatedIndex) external returns (uint8 index, uint256 value) {
