@@ -3,6 +3,8 @@ keys to draw on larger areas of the screen. It comes with an agent that claims t
 
 🏆 The goal is to conquer the bottom left quadrant (4x4) tiles on snow.computer!
 
+Deployed at [0xc001c0de2D7ac3b783D86D59506587383B0438B2](https://polygonscan.com/address/0xc001c0de2d7ac3b783d86d59506587383b0438b2#code)
+
 ## Getting started
 
 ### Install foundry
